@@ -2,9 +2,10 @@
 # simple_tag_replace
 This is a Python3 script for simply replacing tags in a template with user entered input
 Here is an example of a template file using tags starting with < and closing with > name template.txt:
+```bash
 The quick red <noun1>
 jumped over the <noun2>.
-
+```
 EXAMPLE USAGE:
 ```bash
 python3 tagReplaceGUI.py
@@ -19,5 +20,7 @@ If you fill the box like this:
 * |noun2 | dog |
 
 And then click save and use the file dialog name our file `fox.txt` the output will to the file will be:
+```bash
 The quick red fox
 jumped over the dog.
+```
