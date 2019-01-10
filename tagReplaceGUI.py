@@ -41,13 +41,13 @@ class Window(Frame):
         # command it runs on event is client_exit
         file.add_command(label="Open", command=self.openFile)
         file.add_command(label="Save", command=self.saveFile)
-        file.add_command(label="Exit", command=self.space_rats)
+        file.add_command(label="Exit", command=self.space_rats, accelerator="Ctrl+Q")
 
         #added "file" to our menu
-        menu.add_cascade(label="File", menu=file)
-
+        menu.add_cascade(label="File", underline=0, menu=file)
         # create the file object)
         edit = Menu(menu)
+        self.bind_all("<Control-q>", self.space_rats)
 
         # adds a command to the menu option, calling it exit, and the
         # command it runs on event is client_exit
@@ -56,11 +56,10 @@ class Window(Frame):
         #added "file" to our menu
         menu.add_cascade(label="View", menu=edit)
         self.showImg()
-
         clearButton = Button(self, text="Clear",command=self.clearWindow)
         # placing the button on my window
         clearButton.place(x=375, y=560)
-        quitButton = Button(self, text="Quit",command=self.space_rats)
+        quitButton = Button(self, text="Quit", command=self.space_rats)
         # placing the button on my window
         quitButton.place(x=435, y=560)
 
@@ -70,7 +69,7 @@ class Window(Frame):
             self.L1.append( Label(self, text=tag))
             self.L1[tag_count].place(x=0, y=tag_count*28)
             self.E1.append(Entry(self, bd =5))
-            self.E1[tag_count].place(x=128, y=tag_count*28)
+            self.E1[tag_count].place(x=158, y=tag_count*28)
             tag_count += 1
 
     def showImg(self):
@@ -129,11 +128,12 @@ class Window(Frame):
         print(self.template)
 
     #Quit button function
-    def space_rats(self):
+    def space_rats(self, event=""):
         exit()
 
 root = Tk()
-
+img = PhotoImage(file='jsi-logo-256.png')
+root.tk.call('wm', 'iconphoto', root._w, img)
 #size of the window
 root.geometry("500x600")
 
