@@ -12,6 +12,7 @@ EXAMPLE USAGE:
 python3 tagReplaceGUI.py
 ```
 A window will open and from the file menue pick the template you want to use, everything between `<` and `>` will be give a lable and a text input box. If the file contains html cod this will cause it to recognize all tags, not just the ones you want to change.
+
 Here is an example of what will appear in the tkinter window from opening the above `template.txt`
 * |noun1 | - - - | 
 * |noun2 | - - - | 
