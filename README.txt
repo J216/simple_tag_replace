@@ -11,7 +11,7 @@ Here is an example of what will appear in the tkinter window from opening the ab
 noun2 :     :
 noun1 :     :
 
-If will fill the box like this:
+If you fill the box like this:
 noun2 : fox :
 noun1 : dog :
 
