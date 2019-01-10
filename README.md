@@ -21,7 +21,7 @@ If you fill the box like this:
 * |noun1 | fox |
 * |noun2 | dog |
 
-And then click save and use the file dialog name our file `fox.txt` the output will to the file will be:
+And then click File --> Save and use the file dialog name our file `fox.txt` the output will to the file will be:
 ```bash
 The quick red fox
 jumped over the dog.
