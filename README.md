@@ -24,3 +24,4 @@ And then click save and use the file dialog name our file `fox.txt` the output w
 The quick red fox
 jumped over the dog.
 ```
+![alt text](https://github.com/J216/simple_tag_replace/raw/master/tagreplace-screenshot.png "JSI Logo")
