@@ -129,7 +129,7 @@ class Window(Frame):
 
     #Quit button function
     def space_rats(self, event=""):
-        exit()
+        sys.exit(0)
 
 root = Tk()
 img = PhotoImage(file='jsi-logo-256.png')
