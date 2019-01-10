@@ -1,6 +1,7 @@
 ![alt text](https://github.com/J216/simple_tag_replace/raw/master/jsi-logo-256.png "JSI Logo")
 # simple_tag_replace
 This is a Python3 script for simply replacing tags in a template with user entered input
+
 Here is an example of a template file using tags starting with < and closing with > name template.txt:
 ```bash
 The quick red <noun1>
