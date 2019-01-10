@@ -15,7 +15,8 @@ class Window(Frame):
     replace = []
     E1 = []
     L1 = []
-
+    winx = 500
+    winy = 400
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master = master
@@ -71,6 +72,7 @@ class Window(Frame):
             self.E1.append(Entry(self, bd =5))
             self.E1[tag_count].place(x=158, y=tag_count*28)
             tag_count += 1
+        self.resizeWindow()
 
     def showImg(self):
         load = Image.open("jsi-logo-256.png")
@@ -81,12 +83,12 @@ class Window(Frame):
         img.place(x=240, y=300)
 
     def openFile(self):
-        self.filename =  filedialog.askopenfilename(initialdir = "~/scripts/",title = "Select file",filetypes = (("ini files","*.ini"),("all files","*.*")))
+        self.filename =  filedialog.askopenfilename(initialdir = "~/",title = "Select file",filetypes = (("ini files","*.ini"),("all files","*.*")))
         self.loadTemplate()
         self.drawEntry()
 
     def saveFile(self):
-        self.filename =  filedialog.asksaveasfilename(initialdir = "~/scripts/",title = "Select file",filetypes = (("ini files","*.ini"),("all files","*.*")))
+        self.filename =  filedialog.asksaveasfilename(initialdir = "~/",title = "Select file",filetypes = (("ini files","*.ini"),("all files","*.*")))
         for t in self.E1:
             self.replace.append(t.get())
         self.replaceTags()
@@ -130,6 +132,10 @@ class Window(Frame):
     #Quit button function
     def space_rats(self, event=""):
         sys.exit(0)
+
+    def resizeWindow(self):
+        self.winy=(len(self.tags)+1)*30+100
+        self.configure(width=self.winy) 
 
 root = Tk()
 img = PhotoImage(file='jsi-logo-256.png')
