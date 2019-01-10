@@ -59,18 +59,18 @@ class Window(Frame):
         self.showImg()
         clearButton = Button(self, text="Clear",command=self.clearWindow)
         # placing the button on my window
-        clearButton.place(x=375, y=560)
+        clearButton.place(x=325, y=460)
         quitButton = Button(self, text="Quit", command=self.space_rats)
         # placing the button on my window
-        quitButton.place(x=435, y=560)
+        quitButton.place(x=385, y=460)
 
     def drawEntry(self):
         tag_count = 0
         for tag in self.tags:
             self.L1.append( Label(self, text=tag))
-            self.L1[tag_count].place(x=0, y=tag_count*28)
+            self.L1[tag_count].place(x=10, y=tag_count*28)
             self.E1.append(Entry(self, bd =5))
-            self.E1[tag_count].place(x=158, y=tag_count*28)
+            self.E1[tag_count].place(x=178, y=tag_count*28)
             tag_count += 1
         self.resizeWindow()
 
@@ -80,7 +80,7 @@ class Window(Frame):
         # labels can be text or images
         img = Label(self, image=render)
         img.image = render
-        img.place(x=240, y=300)
+        img.place(x=190, y=200)
 
     def openFile(self):
         self.filename =  filedialog.askopenfilename(initialdir = "~/",title = "Select file",filetypes = (("ini files","*.ini"),("all files","*.*")))
@@ -141,7 +141,7 @@ root = Tk()
 img = PhotoImage(file='jsi-logo-256.png')
 root.tk.call('wm', 'iconphoto', root._w, img)
 #size of the window
-root.geometry("500x600")
+root.geometry("450x500")
 
 app = Window(root)
 root.mainloop() 
