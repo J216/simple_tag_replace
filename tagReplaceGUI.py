@@ -5,7 +5,7 @@ import os
 import re
 from tkinter import filedialog
 from tkinter import *
-from PIL import Image, ImageTk
+from PIL import ImageTk, Image
 
 
 class Window(Frame):
