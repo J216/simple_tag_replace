@@ -2,6 +2,11 @@
 # simple_tag_replace
 This is a Python3 script for simply replacing tags in a template with user entered input
 
+Requirements:
+```bash
+sudo apt-get install python3-pil python3-pil.imagetk
+```
+
 Here is an example of a template file using tags starting with `<` and closing with `>` name `template.txt`:
 ```bash
 The quick red <noun1>
