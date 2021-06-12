@@ -14,7 +14,7 @@ Here is an example of a template file using tags. Tags starting with `<` and clo
 The quick red <noun1>
 jumped over the <noun2>.
 ```
-
+To run the script:
 ```bash
 python3 tagReplaceGUI.py
 ```
